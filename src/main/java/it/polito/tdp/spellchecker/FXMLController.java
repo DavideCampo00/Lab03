@@ -52,6 +52,11 @@ public class FXMLController {
 
     @FXML
     void doSpellCheck(ActionEvent event) {
+    	long start,end;
+    	start=System.currentTimeMillis();
+    	Dictionary dic=new Dictionary();
+    	txtErrori.clear();
+    	txtOutput.clear();
     	String input=txtInput.getText();
     	String arrayParole[];
     	String lingua=cmbLingue.getValue();
@@ -68,12 +73,15 @@ public class FXMLController {
     	res=dic.spellCheckText(l);
     	int cont=0;
     	for(RichWord r:res) {
-    		if(r.isCorretto()==false)
-    			txtOutput.appendText(r.getWord()+"\n");
+    		if(r.isCorretto()==false) {
+    			txtOutput.appendText(r.toString()+"\n");
     			cont++;
+    		}
     		
     	}
+    	end=System.currentTimeMillis();
     	txtErrori.setText("Ci sono "+ cont+ " errori");
+    	txtTempo.setText("Spell check completed in "+ (end-start)*0.001 +" s" );
     }
     
      
