@@ -5,7 +5,6 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -57,23 +56,23 @@
             </TextArea>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="txtErrori" translateX="125.0">
+                  <Label fx:id="lblErrori" prefHeight="18.0" prefWidth="217.0" textFill="#f20505">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
-                  </TextField>
-                  <Button mnemonicParsing="false" onAction="#doClearText" text="Clear Text" translateX="125.0">
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#doClearText" text="Clear Text" translateX="20.0">
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </HBox.margin>
                   </Button>
                </children>
             </HBox>
-            <TextField fx:id="txtTempo">
+            <Label fx:id="lblTempo" prefHeight="18.0" prefWidth="307.0">
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
-            </TextField>
+            </Label>
          </children>
       </VBox>
    </center>
